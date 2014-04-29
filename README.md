@@ -1,8 +1,9 @@
 HuntX
 =====
 
-HuntX is an online quiz script. (treasure hunt script)
-This is a php and sql based script.
+HuntX is an online quiz script (treasure hunt script)
+
+HuntX is a php and sql based script.
 
 The scripts boasts many features like
 
@@ -22,8 +23,11 @@ You may use the script to organize a treasure hunt or online quiz.
 See the live demo now at – http://www.huntx.tk/
 
 Access admin panel from http://www.huntx.tk/admin.php
+
 Admin unsername – admin
+
 Admin password – admin
+
 
 Register at the site using your email/disposable emails to test all the features.
 
