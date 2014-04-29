@@ -10,5 +10,3 @@ Instructions on adding/editing questions.
 2)	Entering image, html code and question are optional.
 3)	Question can also contain html code
 4)	Entering the answer is mandatory.
-
-Contact me at muditthedevil@gmail.com if you need any help.
