@@ -1,0 +1,14 @@
+Installation instructions!
+1)	Edit config.php and enter your database details, site URL etc. in it. Add questions as explained below (Optionally you may edit rules.php also to add your rules).
+2)	Upload all the files and folders to the root of your website's directory (usually public_html)
+3)	Visit yoursite.com/install.php
+4)	Delete install.php (optional)
+5)	To add/edit questions or see user details log in with user admin and then visit the admin panel at yoursite.com/admin.php
+
+Instructions on adding/editing questions.
+1)	Visit the admin panel at yoursite.com/admin.php to begin.
+2)	Entering image, html code and question are optional.
+3)	Question can also contain html code
+4)	Entering the answer is mandatory.
+
+Contact me at muditthedevil@gmail.com if you need any help.
