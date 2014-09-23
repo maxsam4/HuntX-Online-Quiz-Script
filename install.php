@@ -1,4 +1,4 @@
-<?
+<?php 
 include ('config.php');
 $newtable = "CREATE TABLE IF NOT EXISTS members ( ". 
   "Memberid int(10) NOT NULL AUTO_INCREMENT, ".

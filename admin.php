@@ -1,4 +1,4 @@
-<?php
+<?php 
 ob_start();
     session_start();
 if($_SESSION['Username']!='admin'){
@@ -6,7 +6,9 @@ if($_SESSION['Username']!='admin'){
     exit();
 
 }
+include('config.php');
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
@@ -16,7 +18,7 @@ if($_SESSION['Username']!='admin'){
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title><?echo $sitetitle?></title>
+        <title><?php echo $sitetitle?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    
         
@@ -28,7 +30,7 @@ if($_SESSION['Username']!='admin'){
         <div class="container">
             
             <header>
-                <h1><?echo $sitetitle?></h1>
+                <h1><?php echo $sitetitle?></h1>
 				
             </header>
             <section>				

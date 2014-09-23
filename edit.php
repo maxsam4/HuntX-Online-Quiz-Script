@@ -1,4 +1,4 @@
-<?php
+<?php 
 ob_start();
 session_start();
 if ($_SESSION['Username'] != 'admin')
@@ -25,7 +25,7 @@ if (isset($_POST["id"]))
 		<head>
 		<meta charset="UTF-8" />
 		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-		<title><?
+		<title><?php 
         echo $sitetitle;
 ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -39,10 +39,10 @@ if (isset($_POST["id"]))
 		<div class="container">
 		
 		<header>
-		<h1><?
+		<h1><?php 
         echo $sitetitle;
 ?></h1>
-		<?
+		<?php 
         include('nav.php');
 ?>	
 		</header>
@@ -78,7 +78,7 @@ if (isset($_POST["id"]))
 		</div>
 		</body>
 		</html>
-		<?
+		<?php 
     }
     else
     {$q = mysql_fetch_array($result2) or die(mysql_error());
@@ -152,7 +152,7 @@ if (isset($_POST["id"]))
 			<head>
 			<meta charset="UTF-8" />
 			<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-			<title><?
+			<title><?php 
             echo $sitetitle;
 ?></title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -166,10 +166,10 @@ if (isset($_POST["id"]))
 			<div class="container">
 			
 			<header>
-			<h1><?
+			<h1><?php 
             echo $sitetitle;
 ?></h1>
-			<?
+			<?php 
             include('nav.php');
 ?>	
 			</header>
@@ -180,7 +180,7 @@ if (isset($_POST["id"]))
 			<a class="hiddenanchor" id="tologin"></a>
 			<div id="wrapper">
 			<div id="login" class="animate form">
-			<h1><?
+			<h1><?php 
             echo $fm;
 ?></h1>
 			
@@ -192,7 +192,7 @@ if (isset($_POST["id"]))
 			</section>
 			</div>
 			</body>
-			</html><?
+			</html><?php 
         }
         else
         {
@@ -208,7 +208,7 @@ if (isset($_POST["id"]))
 			<head>
 			<meta charset="UTF-8" />
 			<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-			<title><?
+			<title><?php 
             echo $sitetitle;
 ?></title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -222,10 +222,10 @@ if (isset($_POST["id"]))
 			<div class="container">
 			
 			<header>
-			<h1><?
+			<h1><?php 
             echo $sitetitle;
 ?></h1>
-			<?
+			<?php 
             include('nav.php');
 ?>		
 			<script type="text/javascript" >
@@ -249,14 +249,14 @@ target: '#preview'
 			<a class="hiddenanchor" id="tologin"></a>
 			<div id="wrapper">
 			<div id="login" class="animate form">
-			<b><h1>Edit question number <?
+			<b><h1>Edit question number <?php 
             echo $level;
 ?></h1></b>
 			<form method="post" action="edit.php" enctype="multipart/form-data" class="login">
 			
 			<p>
 			<label for="username" class="uname" data-icon="u" > </br> </label>
-			<input name="ques" type="text" id="Username" value="<?
+			<input name="ques" type="text" id="Username" value="<?php 
             echo $q['question'];
 ?>">
 			</p>	
@@ -266,19 +266,19 @@ target: '#preview'
 			<p>
 			<p>
 			<label for="username" class="uname" data-icon="u" > </br> </label>
-			<input name="code" type="text" id="Username" value="<?
+			<input name="code" type="text" id="Username" value="<?php 
             echo $q['code'];
 ?>">
 			</p>
 			<p>
 			<label for="username" class="uname" data-icon="u" > </br> </label>
-			<input name="key" required="required" type="text" id="Username" value="<?
+			<input name="key" required="required" type="text" id="Username" value="<?php 
             echo $q['answer'];
 ?>">
 			</p>
 
 			<input type="hidden" name="formsubmitted" value="TRUE" />
-			<input type="hidden" name="id" value="<?
+			<input type="hidden" name="id" value="<?php 
             echo $level;
 ?>" />
 			<p class="login button"> 
@@ -297,7 +297,7 @@ target: '#preview'
 			</body>
 			</html>
 
-			<?
+			<?php 
         }
     }
 }
@@ -313,7 +313,7 @@ else
 	<head>
 	<meta charset="UTF-8" />
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-	<title><?
+	<title><?php 
     echo $sitetitle;
 ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -327,10 +327,10 @@ else
 	<div class="container">
 	
 	<header>
-	<h1><?
+	<h1><?php 
     echo $sitetitle;
 ?></h1>
-	<?
+	<?php 
     include('nav.php');
 ?>	
 	
@@ -367,6 +367,6 @@ else
 	</div>
 	</body>
 	</html>
-	<?
+	<?php 
 }
 ?>

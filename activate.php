@@ -55,7 +55,7 @@ body {
 </style>
 
 </head>
-<body><?php
+<body><?php 
 include('config.php');
 
 

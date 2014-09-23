@@ -1,4 +1,4 @@
-<?
+<?php 
 if(isset($_POST['ans']))
 {
 $un = ($_POST['ans']);
@@ -50,7 +50,7 @@ echo '<div class="errormsgbox"> <ol>';
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title><?echo $sitetitle?> </title>
+		<title><?php echo $sitetitle?> </title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -103,7 +103,7 @@ echo '<div class="errormsgbox"> <ol>';
 					
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="/"><?echo $sitetitle?></a></h1>
+								<h1><a href="/"><?php echo $sitetitle?></a></h1>
 							</div>
 					
 						<!-- Nav -->
@@ -112,16 +112,16 @@ echo '<div class="errormsgbox"> <ol>';
 									<li ><a href="/start.php">Start the Quiz</a></li>
 									<li><a href="/rules.php">Rules </a></li>
 									<li><a href="/leader.php">Leader Board</a></li>
-									<?if(!isset($_SESSION['Username']))
-						{?><li><a href="/register.php">REGISTER</a></li><?}
+									<?php if(!isset($_SESSION['Username']))
+						{?><li><a href="/register.php">REGISTER</a></li><?php }
 									else
 									{
-									?><li><a href="/logout.php">Logout</a></li><?
+									?><li><a href="/logout.php">Logout</a></li><?php 
 									}?>
 								</ul>
 							</nav>
 					
-						<?if(!isset($_SESSION['Username']))
+						<?php if(!isset($_SESSION['Username']))
 						{?>
 							<form method="post" action="login.php" class="login">
 							<H4 for="login">LOGIN </H4> 
@@ -139,13 +139,13 @@ echo '<div class="errormsgbox"> <ol>';
 
 								<p class="forgot-password"><a href="forgot.php">Forgot password?</a></p>
 							</form>
-						<?}?>
+						<?php }?>
 						
 						<!-- Text -->
 							<section class="is-text-style1">
 								<div class="inner">
 									<p>
-										<strong><?echo $sitedesc?></strong>
+										<strong><?php echo $sitedesc?></strong>
 									</p>
 								</div>
 							</section>					
@@ -154,7 +154,7 @@ echo '<div class="errormsgbox"> <ol>';
 							<div id="copyright">
 								<p>
 									
-									<? echo $bottom?>
+									<?php  echo $bottom?>
 								</p>
 							</div>
 

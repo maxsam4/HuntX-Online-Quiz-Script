@@ -1,4 +1,4 @@
-<?php
+<?php 
 ob_start();
     session_start();
 if($_SESSION['Username']!='admin'){
@@ -22,7 +22,7 @@ $result = mysql_query($query) or die(mysql_error());
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title><?echo $sitetitle?></title>
+        <title><?php echo $sitetitle?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    
         
@@ -136,13 +136,13 @@ table tr:hover td{
         <div class="container">
             
             <header>
-                <h1><?echo $sitetitle?></h1>
-			<?include('nav.php');?>
+                <h1><?php echo $sitetitle?></h1>
+			<?php include('nav.php');?>
             </header>
             <section>				
                 <center><table cellspacing='0'>
 	<tr><th>Username</th><th>Level</th><th>Last level completed on</th><th>School</th><th>Email</th><th>Name</tr>
-										<?											
+										<?php 											
 											
 											while($row = mysql_fetch_array($result)){ 
 

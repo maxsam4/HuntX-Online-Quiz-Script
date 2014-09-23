@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 $session_id='1'; //$session id
 $path = "i/";

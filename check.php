@@ -1,4 +1,4 @@
-<?
+<?php 
    
 if(isset($_POST['ans']))
 {
@@ -13,7 +13,7 @@ if(isset($_POST['ans']))
 			$upd = mysql_query($up) or die(mysql_error());
 			
 		$a=2;
-		?><meta http-equiv="refresh" content="0; url=<?echo $site?>/start.php"><?
+		?><meta http-equiv="refresh" content="0; url=<?php echo $site?>/start.php"><?php 
 	}
 	else
 	{

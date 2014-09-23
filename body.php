@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title><?echo $sitetitle?></title>
+		<title><?php echo $sitetitle?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -32,25 +32,25 @@
 							<!-- Post -->
 								<article class="is-post is-post-excerpt">
 									<header>
-										<h2><a href="#">Level <?=$lvl;?></a></h2>
+										<h2><a href="#">Level <?php =$lvl;?></a></h2>
 									</header>
-		<p><?
+		<p><?php 
 if($a==1)
 {
-	?><div class="errormsgbox1"><p class="ta">Naah...</br>Try something else.</p></div><?
+	?><div class="errormsgbox1"><p class="ta">Naah...</br>Try something else.</p></div><?php 
 }
 else if($a==2)
 {
-	?><div class="successbox"><p class="ta">YEAH!!</br>You got it.</p></div><?
+	?><div class="successbox"><p class="ta">YEAH!!</br>You got it.</p></div><?php 
 }
 ?></p>			
 <p>
-<?if(isset($ques['question']) && $ques['question']!=''){?>
-<? echo $ques['question'] ?><br></br>
-<?}?>
-<?if(isset($ques['image']) && $ques['image']!=''){?>									
-<img src="/i/<?echo $ques['image']?>" alt="" />
-<?}?>
+<?php if(isset($ques['question']) && $ques['question']!=''){?>
+<?php  echo $ques['question'] ?><br></br>
+<?php }?>
+<?php if(isset($ques['image']) && $ques['image']!=''){?>									
+<img src="/i/<?php echo $ques['image']?>" alt="" />
+<?php }?>
 </p>
 			<form action="start.php" method="post" >						
     <p>
@@ -59,7 +59,7 @@ else if($a==2)
 			<input type="hidden" name="formsubmitted" value="TRUE" />
          <button type="submit" class="ans-button">TRY THIS !!</button>
 		 </form>
-		 <?if(isset($ques['code']) && $ques['code']!=''){ echo $ques['code']; }?>
+		 <?php if(isset($ques['code']) && $ques['code']!=''){ echo $ques['code']; }?>
 										
 								</article>
 												</div>
@@ -70,7 +70,7 @@ else if($a==2)
 					
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="/"><?echo $sitetitle?></a></h1>
+								<h1><a href="/"><?php echo $sitetitle?></a></h1>
 							</div>
 					
 						<!-- Nav -->
@@ -79,16 +79,16 @@ else if($a==2)
 									<li ><a href="/start.php">Start the Quiz</a></li>
 									<li><a href="/rules.php">Rules </a></li>
 									<li><a href="/leader.php">Leader Board</a></li>
-									<?if(!isset($_SESSION['Username']))
-						{?><li><a href="/register.php">REGISTER</a></li><?}
+									<?php if(!isset($_SESSION['Username']))
+						{?><li><a href="/register.php">REGISTER</a></li><?php }
 									else
 									{
-									?><li><a href="/logout.php">Logout</a></li><?
+									?><li><a href="/logout.php">Logout</a></li><?php 
 									}?>
 								</ul>
 							</nav>
 					
-						<?if(!isset($_SESSION['Username']))
+						<?php if(!isset($_SESSION['Username']))
 						{?>
 							<form method="post" action="login.php" class="login">
 							<H4 for="login">LOGIN </H4> 
@@ -106,13 +106,13 @@ else if($a==2)
 
 								<p class="forgot-password"><a href="forgot.php">Forgot password?</a></p>
 							</form>
-						<?}?>
+						<?php }?>
 						
 						<!-- Text -->
 							<section class="is-text-style1">
 								<div class="inner">
 									<p>
-										<strong><?echo $sitedesc?></strong>
+										<strong><?php echo $sitedesc?></strong>
 									</p>
 								</div>
 							</section>					
@@ -121,7 +121,7 @@ else if($a==2)
 							<div id="copyright">
 								<p>
 									
-									<? echo $bottom?>
+									<?php  echo $bottom?>
 								</p>
 							</div>
 

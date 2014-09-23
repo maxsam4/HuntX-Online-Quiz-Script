@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 
 include ('config.php');
@@ -12,7 +12,7 @@ ob_start();
 ?>
 <html>
 <head>
-		<title><?echo $sitetitle?> </title>
+		<title><?php echo $sitetitle?> </title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -155,7 +155,7 @@ table tr:hover td{
 										
 <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
 	<tr><th>Rank</th><th>Username</th><th>Level</th><th>Last level completed on</th></tr>
-										<?											
+										<?php 											
 $a=1;
 											
 											while($row = mysql_fetch_array($result)){ 
@@ -177,7 +177,7 @@ break;
 					
 						<!-- Logo -->
 							<div id="logo">
-								<h1><a href="/"><?echo $sitetitle?></a></h1>
+								<h1><a href="/"><?php echo $sitetitle?></a></h1>
 							</div>
 					
 						<!-- Nav -->
@@ -186,16 +186,16 @@ break;
 									<li ><a href="/start.php">Start the Quiz</a></li>
 									<li><a href="/rules.php">Rules </a></li>
 									<li><a href="/leader.php">Leader Board</a></li>
-									<?if(!isset($_SESSION['Username']))
-						{?><li><a href="/register.php">REGISTER</a></li><?}
+									<?php if(!isset($_SESSION['Username']))
+						{?><li><a href="/register.php">REGISTER</a></li><?php }
 									else
 									{
-									?><li><a href="/logout.php">Logout</a></li><?
+									?><li><a href="/logout.php">Logout</a></li><?php 
 									}?>
 								</ul>
 							</nav>
 					
-						<?if(!isset($_SESSION['Username']))
+						<?php if(!isset($_SESSION['Username']))
 						{?>
 							<form method="post" action="login.php" class="login">
 							<H4 for="login">LOGIN </H4> 
@@ -213,13 +213,13 @@ break;
 
 								<p class="forgot-password"><a href="forgot.php">Forgot password?</a></p>
 							</form>
-						<?}?>
+						<?php }?>
 						
 						<!-- Text -->
 							<section class="is-text-style1">
 								<div class="inner">
 									<p>
-										<strong><?echo $sitedesc?></strong>
+										<strong><?php echo $sitedesc?></strong>
 									</p>
 								</div>
 							</section>					
@@ -228,7 +228,7 @@ break;
 							<div id="copyright">
 								<p>
 									
-									<? echo $bottom?>
+									<?php  echo $bottom?>
 								</p>
 							</div>
 
@@ -239,7 +239,7 @@ break;
 	</body>
 </html>
 
-<?
+<?php 
 
 mysql_close($dbhandle);
 

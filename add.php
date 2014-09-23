@@ -1,4 +1,4 @@
-<?php
+<?php 
 ob_start();
     session_start();
 if($_SESSION['Username']!='admin'){
@@ -79,7 +79,7 @@ $error = array();
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title><?echo $sitetitle?></title>
+        <title><?php echo $sitetitle?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    
         
@@ -91,8 +91,8 @@ $error = array();
         <div class="container">
             
             <header>
-                <h1><?echo $sitetitle?></h1>
-<?include('nav.php');?>	
+                <h1><?php echo $sitetitle?></h1>
+<?php include('nav.php');?>	
             </header>
             <section>				
                 <div id="container_demo" >
@@ -101,7 +101,7 @@ $error = array();
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-    <h1><?echo $fm;?></h1>
+    <h1><?php echo $fm;?></h1>
 							
                         </div>
 						
@@ -111,7 +111,7 @@ $error = array();
             </section>
         </div>
     </body>
-</html><?
+</html><?php 
 }  
 else 
 {
@@ -129,7 +129,7 @@ else
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title><?echo $sitetitle?></title>
+        <title><?php echo $sitetitle?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    
         
@@ -143,8 +143,8 @@ else
         <div class="container">
             
             <header>
-                <h1><?echo $sitetitle?></h1>
-				<?include('nav.php');?>	
+                <h1><?php echo $sitetitle?></h1>
+				<?php include('nav.php');?>	
 <script type="text/javascript" >
  $(document).ready(function() { 
 		
@@ -167,7 +167,7 @@ else
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-    <b><h1>Add question number <?echo $level;?></h1></b>
+    <b><h1>Add question number <?php echo $level;?></h1></b>
 							<form method="post" action="add.php" enctype="multipart/form-data" class="login">
 							
 								<p>
@@ -212,4 +212,4 @@ else
     </body>
 </html>
 
-<?}?>
+<?php }?>

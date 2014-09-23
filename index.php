@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
 HuntX - http://www.huntx.tk
 
@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ob_start();
     session_start();
 if(isset($_SESSION['Username']))
-	{?><meta http-equiv="refresh" content="0; url=<?echo $site?>/start.php"><?}
+	{echo '<meta http-equiv="refresh" content="0; url=' . $site . '/start.php">';}
 
 $aa=0;
 include ('config.php');
@@ -57,7 +57,7 @@ session_start();
 
             $_SESSION = mysqli_fetch_array($result_check_credentials, MYSQLI_ASSOC);//Assign the result of this query to SESSION Global Variable
            
-?><meta http-equiv="refresh" content="0; url=<?echo $site?>/start.php"><?
+echo '<meta http-equiv="refresh" content="0; url=' . $site . '/start.php">';
           
 
         }else
@@ -106,7 +106,7 @@ echo '<div class="errormsgbox"> <ol>';
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title><?echo $sitetitle?></title>
+        <title><?php echo $sitetitle?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
    
         
@@ -118,18 +118,18 @@ echo '<div class="errormsgbox"> <ol>';
         <div class="container">
             <!-- Codrops top bar -->
             <div class="codrops-top">
-                <a href="<?echo $site?>/leader.php">
+                <a href="<?php echo $site;?>/leader.php">
                     <strong>See the Leader Board</strong>
                 </a>
                 <span class="right">
-                    <a href="<?echo $site?>/rules.php">
+                    <a href="<?php echo $site?>/rules.php">
                         <strong>Read the Rules</strong>
                     </a>
                 </span>
                 <div class="clr"></div>
             </div><!--/ Codrops top bar -->
             <header>
-                <h1><?echo $sitetitle?></h1>
+                <h1><?php echo $sitetitle?></h1>
 				
             </header>
             <section>				
@@ -144,16 +144,15 @@ echo '<div class="errormsgbox"> <ol>';
                                 
                                 
                                 
-								<?if(!isset($_SESSION['Username']))
-						{?><?}
-									else
+								<?php 
+									if(isset($_SESSION['Username']))
 									{
-									?><li><a href="/logout.php">Logout</a></li><?
+									?><li><a href="/logout.php">Logout</a></li><?php 
 									}?>
 								</ul>
 							</nav>
 					
-						<?if(!isset($_SESSION['Username']))
+						<?php if(!isset($_SESSION['Username']))
 						{?>
 							<form method="post" action="index.php" class="login">
 							
@@ -174,7 +173,7 @@ echo '<div class="errormsgbox"> <ol>';
 
 								<p class="forgot-password"><a href="forgot.php">Forgot password?</a></p>
 							</form>
-						<?}?>
+						<?php }?>
 						
                                
                                 <p class="change_link">

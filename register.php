@@ -1,4 +1,4 @@
-<?php
+<?php 
 include ('config.php');
 ?>
 <style type="text/css">
@@ -46,7 +46,7 @@ body {
 		 }
 
 </style>
-<?
+<?php 
 if (isset($_POST['formsubmitted'])) {
     $error = array();//Declare An Array to store any error message  
     if (empty($_POST['name'])) {//if no name has been supplied 
@@ -171,6 +171,6 @@ echo '<div class="errormsgbox"> ';
 }
 else
 {
-?><META http-equiv="refresh" content="0;URL=<?echo $site?>/#toregister"><?
+?><META http-equiv="refresh" content="0;URL=<?php echo $site?>/#toregister"><?php 
 }
 ?>
