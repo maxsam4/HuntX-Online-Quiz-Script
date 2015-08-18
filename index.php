@@ -40,7 +40,7 @@ session_start();
 
        
 
-        $query_check_credentials = "SELECT * FROM members WHERE (Username='$Username' AND password='$Password') AND Activation IS NULL";
+        $query_check_credentials = "SELECT * FROM members WHERE (Username='$Username' AND md5(password)=md5('$Password')) AND Activation IS NULL";
    
         
 
