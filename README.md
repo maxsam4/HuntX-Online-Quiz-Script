@@ -18,17 +18,4 @@ The scripts boasts many features like
 - Email verification
 - much more!!
 
-You may use the script to organize a treasure hunt or online quiz.
-
-See the live demo now at – http://www.huntx.tk/
-
-Access admin panel from http://www.huntx.tk/admin.php
-
-Admin unsername – admin
-
-Admin password – admin
-
-
-Register at the site using your email/disposable emails to test all the features.
-
-demo – http://www.huntx.tk/
+You may use the script to organize a treasure hunt or online quiz or CTF.
